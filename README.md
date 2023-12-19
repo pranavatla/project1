@@ -29,7 +29,7 @@
 	Creating a local WebApp using Docker and VS Code. (with plans to migrate it to the EC2 instance for web access)
 	Mapping an EC2 instance to https://project.atla.in/. (Ongoing work to make the WebApp accessible via both HTTP and HTTPS)
 	Preparations to incorporate additional features into the webpage.
-	Developed a main.tf for Terraform containing script for 2 EC2s with name, security config and IP output upon execution.
+	Developed a main.tf for Terraform containing script for 2 EC2s with name, security config and IP output upon execution. (master:/project/main.tf)
 
 |Next Steps|
  My roadmap for the future includes:
