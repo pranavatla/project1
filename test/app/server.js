@@ -42,19 +42,22 @@ app.post('/update-profile', function (req, res) {
     });
 });
 
-// Get all profiles
+// Get the latest profiles
 app.get('/get-profile', function (req, res) {
-
     MongoClient.connect(mongoUrl, mongoClientOptions, function (err, client) {
         if (err) throw err;
 
         let db = client.db(databaseName);
 
-        db.collection("users").find({}).toArray(function (err, result) {
+        db.collection("users").find({}).sort({_id: -1}).limit(1).toArray(function (err, result) {
             if (err) throw err;
             client.close();
 
-            res.send(result); // Send all the user profiles
+            if(result.length > 0) {
+                res.send(result[0]); // Send the most recent user profile
+            } else {
+                res.send({}); // Send an empty object if no profiles exist
+            }
         });
     });
 });
