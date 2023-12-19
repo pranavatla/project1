@@ -1,8 +1,8 @@
 Host 1ec2ap
     HostName ec2-35-154-38-64.ap-south-1.compute.amazonaws.com
     User ubuntu
-    IdentityFile /Users/pranavatla/Desktop/DevOps/Project/1ec2ap.pem
+    IdentityFile /Users/pranavatla/Desktop/DevOps/1ec2ap.pem
 Host 2ec2us
     HostName ec2-44-217-189-31.compute-1.amazonaws.com
     User ubuntu
-    IdentityFile /Users/pranavatla/Desktop/DevOps/Project/2ec2us.pem
+    IdentityFile /Users/pranavatla/Desktop/DevOps/2ec2us.pem
